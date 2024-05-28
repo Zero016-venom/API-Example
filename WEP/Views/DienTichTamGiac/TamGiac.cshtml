@@ -1,0 +1,31 @@
+﻿
+
+@{
+    ViewData["Title"] = "Tính Diện Tích Tam Giác";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="TamGiac" method="post">
+    <div class="form-group">
+        <label for="sideA">Cạnh A:</label>
+        <input type="number" step="any" class="form-control" id="a" name="a"  required />
+    </div>
+    <div class="form-group">
+        <label for="sideB">Cạnh B:</label>
+        <input type="number" step="any" class="form-control" id="b" name="b"  required />
+    </div>
+    <div class="form-group">
+        <label for="sideC">Cạnh C:</label>
+        <input type="number" step="any" class="form-control" id="c" name="c"  required />
+    </div>
+    <button type="submit" class="btn btn-primary">Tính Diện Tích</button>
+</form>
+
+
+    <h3>Kết quả:</h3>
+    <p>@ViewData["result"]</p>
+
+
+
+

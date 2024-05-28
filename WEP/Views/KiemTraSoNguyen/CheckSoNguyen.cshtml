@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Kết quả kiểm tra số nguyên tố";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewData["result"] != null)
+{
+    <p>@ViewData["result"]</p>
+}
+else
+{
+    <p>Không có kết quả.</p>
+}
+
+<a asp-action="Index" class="btn btn-primary">Quay lại</a>

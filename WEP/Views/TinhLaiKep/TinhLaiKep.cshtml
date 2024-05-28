@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Compound Interest Calculator</h2>
+        <form asp-action="CaculateInterest" method="post">
+            <div class="form-group">
+                <label for="months">Number of Months:</label>
+                <input type="number" class="form-control" id="months" name="month" required />
+            </div>
+            <div class="form-group">
+                <label for="principal">Principal Amount:</label>
+                <input type="number" class="form-control" id="principal" name="principal" required />
+            </div>
+            <div class="form-group">
+                <label for="rate">Annual Interest Rate (%):</label>
+                <input type="number" step="any" class="form-control" id="rate" name="rate" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+    </div>
+    <div >
+        <h4>kết quả:</h4>
+        <h2>@ViewData["result"]</h2>
+    </div>
+</div>

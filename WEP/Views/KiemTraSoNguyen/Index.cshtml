@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Kiểm tra số nguyên tố";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="CheckSoNguyen" method="post">
+    <div class="form-group">
+        <label for="numbers">Nhập các số (cách nhau bằng dấu phẩy):</label>
+        <input type="text" class="form-control" id="numbers" name="numbers">
+    </div>
+    <button type="submit" class="btn btn-primary">Kiểm tra</button>
+</form>
