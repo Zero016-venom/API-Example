@@ -8,13 +8,12 @@ namespace lap5_6.Controllers
     public class LAB5_6 : ControllerBase
     {
         [HttpGet("Get-caculate-interest")]
-        public double TinhLaiKepTheoThang(int month, long moneyBefore, double yearRate)
+        public string TinhLaiKepTheoThang(int thang, long tienBanDau, double laiSuatThang)
         {
-            double monthlyRate = yearRate / (100 / 12);
-            //int n = 12;
-            //double t = month / 12.0;
-            double moneyAfter = moneyBefore * Math.Pow((1 + monthlyRate), month);
-            return moneyAfter;
+            ////công thức lãi xuất kép theo tháng A=P(1+r/12)^(12.t)
+            double tienNhanDuoc = tienBanDau * Math.Pow((1 + laiSuatThang / 100), thang);
+            
+            return $"Số tiền bạn nhận được là: {Math.Round(tienNhanDuoc, 0)}";
         }
 
         [HttpPost("Get-check-integer")]

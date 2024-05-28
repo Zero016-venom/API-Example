@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Tính lãi kép theo tháng";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewData["Error1"] != null)
+{
+    <div class="alert alert-danger">
+        @ViewData["Error1"]
+    </div>
+}
+@if (ViewData["Error2"] != null)
+{
+    <div class="alert alert-danger">
+        @ViewData["Error2"]
+    </div>
+}
+@if (ViewData["Error3"] != null)
+{
+    <div class="alert alert-danger">
+        @ViewData["Error3"]
+    </div>
+}
+
+<form asp-action="LaiKep" method="post">
+    <div class="form-group">
+        <label for="thang">Số tháng</label>
+        <input type="number" step="any" class="form-control" id="thang" name="thang" required />
+    </div>
+    <div class="form-group">
+        <label for="tienBanDau">Số tiền ban đầu</label>
+        <input type="number" step="any" class="form-control" id="tienBanDau" name="tienBanDau" required />
+    </div>
+    <div class="form-group">
+        <label for="laiSuatThang">Lãi suất tháng (%)</label>
+        <input type="number" step="any" class="form-control" id="laiSuatThang" name="laiSuatThang" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Tính Lãi</button>
+</form>
+
+
+<h3>Kết quả:</h3>
+<p>@ViewData["result"]</p>
+
+
+
+
+
