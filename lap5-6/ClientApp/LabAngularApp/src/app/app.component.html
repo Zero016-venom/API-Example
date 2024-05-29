@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="page-content">
+
+    <div class="margin-bottom">  
+
+        <div class="flex-1" id="top-bar-div">
+          <h2 class="app-title">
+            Lab 5 - 6 NET105
+          </h2>
+        </div>
+      
+    </div>
+
+
+    <div class="navbar mb">
+
+      <ul>
+        <li>
+          <a [routerLink]="[ '/koithe']" [routerLinkActive]="[ 'nav-active']">Koi Thé</a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a [routerLink]="[ '/laikep']" [routerLinkActive]="[ 'nav-active']">Lãi Kép</a>
+        </li>
+      </ul>
+
+
+    </div>
+
+
+    <div class="body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

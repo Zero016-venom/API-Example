@@ -1,0 +1,22 @@
+<h2>Koi Thé</h2>
+
+<div class="table-container">
+  <table class="table w-100">
+
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Koi Thé Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let koiThe of koiThes; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ koiThe.koiTheName }}</td>
+        <td>{{ koiThe.koiThePrice }}</td>
+      </tr>
+
+  </table>
+</div>
